@@ -20,7 +20,7 @@ public class Main {
         suhuAwal = input.nextDouble();
         Konversi kalkulator = new Konversi(suhuAwal);
 
-        while (ulang == true) {
+        while (ulang) {
             Fahrenheit = kalkulator.toFahrenheit();
             Reamur = kalkulator.toReamur();
             Kelvin = kalkulator.toKelvin();
@@ -33,6 +33,7 @@ public class Main {
             System.out.println("2. Edit Data Konversi");
             System.out.println("3. Exit");
             System.out.print("Pilih\t: ");
+
             pilih = input.nextInt();
             switch (pilih) {
                 case 1 :
@@ -41,7 +42,6 @@ public class Main {
                     System.out.println("Suhu dalam Reamur\t\t: " + Reamur + "°R");
                     System.out.println("Suhu dalam Kelvin\t\t: " + Kelvin + "K");
                     System.out.println("Kondisi Air " + kondisi);
-                    ulang = true;
                     break;
                 case 2 :
                     System.out.print("Suhu Dalam Celcius\t: ");
@@ -56,7 +56,6 @@ public class Main {
                 System.out.println("Opsi tidak ada, mohon masukkan opsi dengan benar!\n");
             }
         }
-
 
     }
 }
